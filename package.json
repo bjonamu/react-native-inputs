@@ -1,0 +1,26 @@
+{
+  "name": "react-native-inputs",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bjonamu/react-native-inputs.git"
+  },
+  "keywords": [
+    "react-native-inputs",
+    "react-native",
+    "inputs",
+    "validation",
+    "password-input"
+  ],
+  "author": "Blessing Jonamu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bjonamu/react-native-inputs/issues"
+  },
+  "homepage": "https://github.com/bjonamu/react-native-inputs#readme"
+}
