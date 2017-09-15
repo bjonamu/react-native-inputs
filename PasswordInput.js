@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { TouchableOpacity, View, Text } from 'react-native'
-import TextInputWithValidation from './TextInputWithValidation'
+import Icon from 'react-native-vector-icons/Entypo'
 
-export default class PasswordInputWithValidation extends Component {
+import TextInput from './RNTextInput'
+
+class PasswordInput extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -21,29 +24,37 @@ export default class PasswordInputWithValidation extends Component {
       valid,
       confirm,
       editable,
+      validate,
+      errorText,
+      iconElement,
       onChangeText,
       returnKeyType,
-      textInputStyle,
       errorTextStyle,
       onSubmitEditing,
-      togglePasswordControlColor,
-      inputContainerStyle
+      borderBottomColor,
+      editableTextStyle,
+      readOnlyTextStyle,
+      togglePasswordControlColor
     } = this.props
     return (
       <View>
-        <TextInputWithValidation
+        <TextInput
           onRef={onRef}
           value={value}
           valid={valid}
-          secureTextEntry={!this.state.show}
+          validate={validate}
           editable={editable}
+          secureTextEntry={!this.state.show}
           returnKeyType={returnKeyType}
-          placeholder={confirm ? 'Confirm password' : 'Password'}
+          label={confirm ? 'Confirm password' : 'Password'}
+          errorText={errorText}
           errorTextStyle={errorTextStyle}
-          textInputStyle={textInputStyle}
-          inputContainerStyle={inputContainerStyle}
+          editableTextStyle={editableTextStyle}
+          readOnlyTextStyle={readOnlyTextStyle}
+          borderBottomColor={borderBottomColor}
           onChangeText={onChangeText}
           onSubmitEditing={onSubmitEditing}
+          iconElement={iconElement || <Icon size={20} name='lock' style={{ color: borderBottomColor }} />}
         />
         <TouchableOpacity onPress={this.toggleShow.bind(this)} style={{ position: 'absolute', top: 10, right: 0, padding: 10 }}>
           <Text style={{ color: togglePasswordControlColor }}>{this.state.show ? 'HIDE' : 'SHOW'}</Text>
@@ -52,3 +63,15 @@ export default class PasswordInputWithValidation extends Component {
     )
   }
 }
+
+PasswordInput.defaultProps = {
+  confirm: false
+}
+
+PasswordInput.propTypes = {
+  // You can ensure that your prop is limited to specific values by treating
+  // it as an enum.
+  validate: PropTypes.oneOf(['onBlur', 'onChangeText'])
+}
+
+export default PasswordInput

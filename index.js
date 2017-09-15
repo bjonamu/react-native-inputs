@@ -1,7 +1,7 @@
-import TextInputWithValidation from './TextInputWithValidation'
-import PasswordInputWithValidation from './PasswordInputWithValidation'
+import TextInput from './RNTextInput'
+import PasswordInput from './PasswordInput'
 
 export {
-  TextInputWithValidation,
-  PasswordInputWithValidation
+  TextInput,
+  PasswordInput
 }
