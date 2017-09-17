@@ -1,7 +1,7 @@
 {
   "name": "react-native-inputs",
-  "version": "0.2.0",
-  "description": "",
+  "version": "0.2.1",
+  "description": "React native inputs for real world apps",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
