@@ -23,5 +23,6 @@ export const Colors = {
   error: 'rgba(200, 0, 0, 0.8)',
   panther: '#161616',
   charcoal: '#595959',
-  coal: '#2d2d2d'
+  coal: '#2d2d2d',
+  steel: '#CCCCCC',
 }

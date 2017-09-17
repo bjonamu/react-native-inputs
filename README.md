@@ -39,25 +39,26 @@ import { TextInput, PasswordInput } from 'react-native-inputs'
 
 #### TextInput props
 
-| Props             | Default values           | Possible values                                                                                    |
-| ----------------- | ------------------------ | -------------------------------------------------------------------------------------------------- |
-| label             | ''                       | **any string**                                                                                     |
-| value             |                          | **any string**                                                                                     |
-| borderBottomColor |                          | **any string**                                                                                     |
-| valid             | false                    | Boolean                                                                                            |
-| editable          | false                    | Boolean                                                                                            |
-| iconElement       | **none**                 | Icon element e.g [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons) |
-| errorText         | `${label} is not valid.` | **any string**                                                                                     |
-| autoCorrect       | false                    | Boolean                                                                                            |
-| autoCapitalize    | false                    | Boolean                                                                                            |
-| secureTextEntry   | false                    | Boolean                                                                                            |
-| keyboardType      | default                  | **keyboard types supported by RN**                                                                 |
-| returnKeyType     | go                       | **returnKeyTypes supported by RN**                                                                 |
-| errorTextStyle    |                          | **style objects**                                                                                  |
-| editableTextStyle |                          | **style objects**                                                                                  |
-| readOnlyTextStyle |                          | **style objects**                                                                                  |
-| onRef             | **none**                 | function                                                                                           |
-| onSubmitEditing   | **none**                 | function                                                                                           |
+| Props             | Default values                                  | Possible values                                                                                    |
+| ----------------- | ----------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| label             | 'Label text'                                    | **any string**                                                                                     |
+| value             | **none**                                        | **any string**                                                                                     |
+| borderBottomColor | **none**                                        | **any string**                                                                                     |
+| valid             | false                                           | Boolean                                                                                            |
+| validate          | 'onBlur'                                        | **enum 'onBlur', 'onChangeText'**                                                                  |
+| editable          | false                                           | Boolean                                                                                            |
+| iconElement       | **none**                                        | Icon element e.g [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons) |
+| errorText         | `${label} is not valid.`                        | **any string**                                                                                     |
+| autoCorrect       | false                                           | Boolean                                                                                            |
+| autoCapitalize    | false                                           | Boolean                                                                                            |
+| secureTextEntry   | false                                           | Boolean                                                                                            |
+| keyboardType      | 'default'                                       | **keyboard types supported by RN**                                                                 |
+| returnKeyType     | 'go'                                            | **returnKeyTypes supported by RN**                                                                 |
+| errorTextStyle    | { color: 'rgba(200, 0, 0, 0.8)', fontSize: 12 } | **style object**                                                                                   |
+| editableTextStyle | { height: 40, color: '#2d2d2d' }                | **style object**                                                                                   |
+| readOnlyTextStyle | { height: 40, color: '#CCCCCC' }                | **style object**                                                                                   |
+| onRef             | **none**                                        | function                                                                                           |
+| onSubmitEditing   | **none**                                        | function                                                                                           |
 
 
 ### PasswordInput
